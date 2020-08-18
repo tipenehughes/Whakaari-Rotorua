@@ -7,7 +7,7 @@
             src="https://kit.fontawesome.com/b0e932b144.js"
             crossorigin="anonymous"
         ></script>
-        <script src="./node_modules/flickity/js/flickity.js"></script>
+        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
         <link
             href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Patua+One&family=Poiret+One&display=swap"
             rel="stylesheet"
@@ -15,8 +15,7 @@
         <link rel="stylesheet" href="style.css" />
         <link
             rel="stylesheet"
-            href="./node_modules/flickity/css/flickity.css"
-            media="screen"
+            href="https://unpkg.com/flickity@2/dist/flickity.min.css"
         />
         <!-- <link rel="stylesheet" href="style-prefix.css" /> -->
         <title>Whakaari Rotorua</title>
@@ -150,59 +149,30 @@
                         </p>
                         <a href="#contact">Contact Us to Book an Event</a>
                     </div>
-                    <div class="carousel-container" id="carouselContainer">
-                        <div class="carousel-slide" id="carouselSlide">
-                            <img
-                                id="firstClone"
-                                class="carousel-img prev-image"
-                                src="./img/slide5.jpg"
-                                alt=""
-                            />
-                            <img
-                                class="carousel-img"
-                                src="./img/slide1.jpg"
-                                alt=""
-                            />
-                            <img
-                                class="carousel-img next-image"
-                                src="./img/slide2.jpg"
-                                alt=""
-                            />
-                            <img
-                                class="carousel-img"
-                                src="./img/slide3.jpg"
-                                alt=""
-                            />
-                            <img
-                                class="carousel-img"
-                                src="./img/slide4.jpg"
-                                alt=""
-                            />
-                            <img
-                                class="carousel-img"
-                                src="./img/slide5.jpg"
-                                alt=""
-                            />
-                            <img
-                                id="lastClone"
-                                class="carousel-img"
-                                src="./img/slide1.jpg"
-                                alt=""
-                            />
+
+                    <!-- Caoursel -->
+                    <div
+                        class="main-carousel"
+                        data-flickity='{ "wrapAround": true }'
+                    >
+                        <div class="carousel-cell">
+                            <img src="./img/slide1.jpg" alt="" />
                         </div>
-                        <div class="slider-button">
-                            <i
-                                class="fas fa-chevron-left slider-btn btn-left"
-                                id="prevBtn"
-                            >
-                            </i>
-                            <i
-                                class="fas fa-chevron-right slider-btn btn-right"
-                                id="nextBtn"
-                            >
-                            </i>
+                        <div class="carousel-cell">
+                            <img src="./img/slide2.jpg" alt="" />
+                        </div>
+                        <div class="carousel-cell">
+                            <img src="./img/slide3.jpg" alt="" />
+                        </div>
+                        <div class="carousel-cell">
+                            <img src="./img/slide4.jpg" alt="" />
+                        </div>
+                        <div class="carousel-cell">
+                            <img src="./img/slide5.jpg" alt="" />
                         </div>
                     </div>
+
+                    <!--  -->
                 </div>
             </section>
             <section id="tour">
