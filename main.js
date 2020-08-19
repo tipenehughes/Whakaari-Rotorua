@@ -223,14 +223,14 @@ mobileMenu.addEventListener("click", function (e) {
     body.classList.toggle("noscroll");
 });
 
-menuOptions.forEach(function () {
-    menuOptions.addEventListener("click", function () {
+for (let i = 0; i < menuOptions.length; i++) {
+    menuOptions[i].addEventListener("click", function () {
         menuOverlay.classList.remove("is-visible");
         if (body.classList.contains("noscroll")) {
             body.classList.remove("noscroll");
         }
     });
-});
+}
 
 // About section image carousel
 
