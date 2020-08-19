@@ -35,11 +35,17 @@ function imgChange() {
 setInterval(imgChange, 6000);
 
 // Whakaari Logo Home button
-const homeBtn = document.getElementById("logoBtn");
+const homeBtn = document.querySelectorAll(".logoBtn");
 
-homeBtn.addEventListener("click", () => {
-    window.scrollTo(0, 0);
-});
+for (let i = 0; i < homeBtn.length; i++) {
+    homeBtn[i].addEventListener("click", () => {
+        window.scrollTo(0, 0);
+        menuOverlay.classList.remove("is-visible");
+        if (body.classList.contains("noscroll")) {
+            body.classList.remove("noscroll");
+        }
+    });
+}
 
 // Home page scroll to about button
 const scrollDown = document.getElementById("scroll-down");
