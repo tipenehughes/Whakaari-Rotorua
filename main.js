@@ -81,16 +81,16 @@ function downAction() {
     logoSpan.classList.add("span-down-action");
 }
 
-let scrollTop = function () {
+const scrollTop = function () {
     return window.scrollY;
 };
 
 let scrollState = 0;
 
 // Primary scroll event function
-let scrollDetect = function (down, up) {
+const scrollDetect = function (down, up) {
     // Current scroll position
-    let currentScroll = scrollTop();
+    const currentScroll = scrollTop();
     if (currentScroll > scrollState) {
         down();
     } else {
@@ -140,12 +140,12 @@ const displayNone = {
     }),
     En: english.forEach((i) => {
         i.style.display = "none";
-    })
+    }),
 };
 
 english.forEach((i) => {
     i.style.display = "block";
-})
+});
 
 const langActive = document.querySelector(".langActive");
 const langList = Array.from(document.querySelectorAll(".langList"));
@@ -175,38 +175,59 @@ langList.forEach((item) => {
             }),
             En: english.forEach((i) => {
                 i.style.display = "none";
-            })
+            }),
         };
 
         if (langActive.childNodes[1].src.includes("english")) {
             displayNone.Cz;
             displayNone.De;
-            displayNone.Pl;    
+            displayNone.Pl;
             english.forEach((i) => {
-                i.style.display = "block"
+                i.style.display = "block";
             });
         } else if (langActive.childNodes[1].src.includes("czech")) {
-            
             displayNone.En;
             displayNone.De;
             displayNone.Pl;
             czech.forEach((i) => {
-                i.style.display = "block"
+                i.style.display = "block";
             });
         } else if (langActive.childNodes[1].src.includes("german")) {
             displayNone.Cz;
             displayNone.De;
             displayNone.Pl;
             german.forEach((i) => {
-                i.style.display = "block"
+                i.style.display = "block";
             });
         } else if (langActive.childNodes[1].src.includes("polish")) {
             displayNone.En;
             displayNone.De;
             displayNone.Cz;
             polish.forEach((i) => {
-                i.style.display = "block"
+                i.style.display = "block";
             });
+        }
+    });
+});
+
+// Hamburger menu
+
+const mobileMenu = document.getElementById("mobileMenu");
+const menuOverlay = document.querySelector(".mobile-nav-overlay-hidden");
+const menuOptions = document.querySelectorAll(".mobile-menu-item");
+const noscroll = document.querySelector(".noscroll");
+const body = document.getElementById("body");
+
+mobileMenu.addEventListener("click", function (e) {
+    menuOverlay.classList.toggle("is-visible");
+    body.classList.toggle("noscroll");
+});
+
+menuOptions.forEach(function () {
+    menuOptions.addEventListener("click", function () {
+        menuOverlay.classList.remove("is-visible");
+        if (body.classList.contains("noscroll")) {
+            body.classList.remove("noscroll");
         }
     });
 });
@@ -217,15 +238,15 @@ const size = carouselImages[0].clientWidth;
 
 // Flickity
 
-var elem = document.querySelector('.main-carousel');
-var flkty = new Flickity( elem, {
-  // options
-  cellAlign: 'left',
-  contain: true
+var elem = document.querySelector(".main-carousel");
+var flkty = new Flickity(elem, {
+    // options
+    cellAlign: "left",
+    contain: true,
 });
 
 // element argument can be a selector string
 //   for an individual element
-var flkty = new Flickity( '.main-carousel', {
-  // options
+var flkty = new Flickity(".main-carousel", {
+    // options
 });

@@ -17,10 +17,9 @@
             href="https://unpkg.com/flickity@2/dist/flickity.min.css"
         />
         <link rel="stylesheet" href="style.css" />
-        <!-- <link rel="stylesheet" href="style-prefix.css" /> -->
         <title>Whakaari Rotorua</title>
     </head>
-    <body>
+    <body id="body">
         <div id="fb-root"></div>
         <script
             async
@@ -29,71 +28,113 @@
             src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v7.0"
             nonce="YEwWcAj6"
         ></script>
-        <header id="header">
-            <div class="logo">
-                <div id="logoBtn">
-                    <h1 id="whakaari">WHAKAARI</h1>
-                    <span id="logoSpan" class="logo-span"></span>
-                    <h3 id="rotorua">Rotorua</h3>
+        <header>
+            <div class="full-screen-nav" id="header">
+                <div class="logo">
+                    <div id="logoBtn">
+                        <h1 id="whakaari">WHAKAARI</h1>
+                        <span id="logoSpan" class="logo-span"></span>
+                        <h3 id="rotorua">Rotorua</h3>
+                    </div>
+                </div>
+                <nav class="navbar">
+                    <ul>
+                        <li>
+                            <a href="#about" lang="en">About</a>
+                            <a href="#about" lang="cz">O Nás</a>
+                            <a href="#about" lang="de">Über</a>
+                            <a href="#about" lang="pl">O Nas</a>
+                        </li>
+                        <li>
+                            <a href="#tour" lang="en">Tour</a>
+                            <a href="#tour" lang="cz">Výlet</a>
+                            <a href="#tour" lang="de">Tour</a>
+                            <a href="#tour" lang="pl">Wycieczka</a>
+                        </li>
+                        <li>
+                            <a href="#contact" lang="en">Contact</a>
+                            <a href="#contact" lang="cz">Kontakt</a>
+                            <a href="#contact" lang="de">Verbindung</a>
+                            <a href="#contact" lang="pl">Kontaktować</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="languages">
+                    <div
+                        class="languages-container drop-down"
+                        id="langContainer"
+                    >
+                        <div class="langActive">
+                            <img src="./img/lang/english.png" id="en" alt="" />
+                            <p>En</p>
+                        </div>
+                        <div class="drop-down-content">
+                            <ul>
+                                <li class="langList">
+                                    <img
+                                        src="./img/lang/czech.png"
+                                        id="cz"
+                                        alt="Czech"
+                                    />
+                                    <p>Cz</p>
+                                </li>
+                                <li class="langList">
+                                    <img
+                                        src="./img/lang/german.png"
+                                        id="de"
+                                        alt="German"
+                                    />
+                                    <p>De</p>
+                                </li>
+                                <li class="langList">
+                                    <img
+                                        src="./img/lang/polish.png"
+                                        id="pl"
+                                        alt="polish"
+                                    />
+                                    <p>Pl</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <nav class="navbar">
-                <ul>
-                    <li>
-                        <a href="#about" lang="en">About</a>
-                        <a href="#about" lang="cz">O Nás</a>
-                        <a href="#about" lang="de">Über</a>
-                        <a href="#about" lang="pl">O Nas</a>
-                    </li>
-                    <li>
-                        <a href="#tour" lang="en">Tour</a>
-                        <a href="#tour" lang="cz">Výlet</a>
-                        <a href="#tour" lang="de">Tour</a>
-                        <a href="#tour" lang="pl">Wycieczka</a>
-                    </li>
-                    <li>
-                        <a href="#contact" lang="en">Contact</a>
-                        <a href="#contact" lang="cz">Kontakt</a>
-                        <a href="#contact" lang="de">Verbindung</a>
-                        <a href="#contact" lang="pl">Kontaktować</a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="languages">
-                <div class="languages-container drop-down" id="langContainer">
-                    <div class="langActive">
-                        <img src="./img/lang/english.png" id="en" alt="" />
-                        <p>En</p>
-                    </div>
-                    <div class="drop-down-content">
-                        <ul>
-                            <li class="langList">
-                                <img
-                                    src="./img/lang/czech.png"
-                                    id="cz"
-                                    alt="Czech"
-                                />
-                                <p>Cz</p>
-                            </li>
-                            <li class="langList">
-                                <img
-                                    src="./img/lang/german.png"
-                                    id="de"
-                                    alt="German"
-                                />
-                                <p>De</p>
-                            </li>
-                            <li class="langList">
-                                <img
-                                    src="./img/lang/polish.png"
-                                    id="pl"
-                                    alt="polish"
-                                />
-                                <p>Pl</p>
-                            </li>
-                        </ul>
-                    </div>
+            <div class="mobile-nav">
+                <div class="mobile-nav-overlay-hidden">
+                    <ul class="mobile-nav-options">
+                        <li>
+                            <div class="logo">
+                                <div id="logoBtn">
+                                    <h1 id="whakaari">WHAKAARI</h1>
+                                    <span
+                                        id="logoSpan"
+                                        class="logo-span"
+                                    ></span>
+                                    <h3 id="rotorua">Rotorua</h3>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="mobile-menu-item" href="#about">About</a>
+                        </li>
+                        <li>
+                            <a class="mobile-menu-item" href="#tour">Tour</a>
+                        </li>
+                        <li>
+                            <a class="mobile-menu-item" href="#contact"
+                                >Contact</a
+                            >
+                        </li>
+                    </ul>
                 </div>
+                <button
+                    id="mobileMenu"
+                    class="mobile-menu"
+                    aria-label="Toggle menu."
+                    aria-controls="mobile-nav-overlay-hidden"
+                >
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
         </header>
         <main>
@@ -189,16 +230,11 @@
                                     <h3>Nov</h3>
                                 </div>
                             </div>
-                            <div class="location">
-                                <div class="venue">
-                                    <h2>Národní divadlo</h2>
-                                </div>
-                                <div class="city">
-                                    <h2>Prague, CZ</h2>
-                                </div>
+                            <div class="venue">
+                                <h2>Národní divadlo</h2>
                             </div>
-                            <div class="notify-btn">
-                                <button>Notify Me</button>
+                            <div class="city">
+                                <h2>Prague, CZ</h2>
                             </div>
                         </div>
                         <div class="tour-item">
@@ -211,16 +247,11 @@
                                     <h3>Nov</h3>
                                 </div>
                             </div>
-                            <div class="location">
-                                <div class="venue">
-                                    <h2>Obecní dům</h2>
-                                </div>
-                                <div class="city">
-                                    <h2>Prague, CZ</h2>
-                                </div>
+                            <div class="venue">
+                                <h2>Obecní dům</h2>
                             </div>
-                            <div class="notify-btn">
-                                <button>Notify Me</button>
+                            <div class="city">
+                                <h2>Prague, CZ</h2>
                             </div>
                         </div>
                         <div class="tour-item">
@@ -233,16 +264,11 @@
                                     <h3>Nov</h3>
                                 </div>
                             </div>
-                            <div class="location">
-                                <div class="venue">
-                                    <h2>Puma Place</h2>
-                                </div>
-                                <div class="city">
-                                    <h2>Prague, CZ</h2>
-                                </div>
+                            <div class="venue">
+                                <h2>Puma Place</h2>
                             </div>
-                            <div class="notify-btn">
-                                <button>Notify Me</button>
+                            <div class="city">
+                                <h2>Prague, CZ</h2>
                             </div>
                         </div>
                         <div class="tour-item">
@@ -255,16 +281,11 @@
                                     <h3>Nov</h3>
                                 </div>
                             </div>
-                            <div class="location">
-                                <div class="venue">
-                                    <h2>Grandhotel Pupp</h2>
-                                </div>
-                                <div class="city">
-                                    <h2>Karlovy Vary, CZ</h2>
-                                </div>
+                            <div class="venue">
+                                <h2>Grandhotel Pupp</h2>
                             </div>
-                            <div class="notify-btn">
-                                <button>Notify Me</button>
+                            <div class="city">
+                                <h2>Karlovy Vary, CZ</h2>
                             </div>
                         </div>
                     </div>
@@ -319,11 +340,23 @@
                         <div class="contact-form">
                             <form action="">
                                 <label for="name">Name</label><br />
-                                <input type="text" id="name" /><br />
+                                <input
+                                    type="text"
+                                    id="name"
+                                    placeholder="Name"
+                                /><br />
                                 <label for="email">Email</label><br />
-                                <input type="text" id="email" /><br />
+                                <input
+                                    type="text"
+                                    id="email"
+                                    placeholder="Email"
+                                /><br />
                                 <label for="message">Message</label><br />
-                                <textarea name="message" id="message"></textarea
+                                <textarea
+                                    name="message"
+                                    id="message"
+                                    placeholder="Message"
+                                ></textarea
                                 ><br />
                                 <input type="submit" />
                             </form>
