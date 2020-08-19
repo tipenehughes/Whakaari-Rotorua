@@ -6,6 +6,8 @@
     box-sizing: border-box;
     list-style: none;
     scroll-behavior: smooth;
+    --main-red: rgb(187, 0, 0);
+    --light-font: rgb(204, 204, 204);
 }
 
 body {
@@ -29,7 +31,7 @@ a {
 }
 
 a:hover {
-    border-bottom: 3px solid rgba(255, 0, 0, 0.705);
+    border-bottom: 3px solid var(--main-red);
     color: rgb(255, 255, 255);
     margin-bottom: -3px;
     transition: all 0.2s ease;
@@ -40,7 +42,7 @@ a:hover {
     width: 10%;
     height: 3px;
     margin: 10px auto;
-    background-color: rgb(255, 0, 0);
+    background-color: var(--main-red);
 }
 
 .noscroll {
@@ -60,7 +62,7 @@ a:hover {
     padding: 0.5rem;
     height: 12vh;
     background: transparent;
-    color: rgba(204, 204, 204, 0.9);
+    color: var(--light-font);
     text-transform: uppercase;
     transition: all 0.5s ease;
     z-index: 100;
@@ -106,7 +108,7 @@ a:hover {
     display: block;
     width: 50%;
     height: 3px;
-    background-color: rgba(255, 0, 0, 0.705);
+    background-color: var(--main-red);
     margin: auto auto 3px auto;
     transition: all 0.5s ease;
 }
@@ -235,14 +237,14 @@ a:hover {
     margin: 1rem;
     width: 3rem;
     height: 3rem;
-    background-color: rgba(255, 0, 0);
+    background-color: var(--main-red);
     outline: none;
     border: none;
     z-index: 200;
 }
 
 .fa-bars {
-    color: #fff;
+    color: var(--light-font);
     font-size: 1.5rem;
 }
 
@@ -274,14 +276,9 @@ a:hover {
 }
 
 .mobile-nav-options li a {
-    color: #fff;
-    font-weight: 200;
+    color: var(--light-font);
+    font-weight: 300;
     font-size: 3rem;
-}
-
-.social-icons-mobile i {
-    padding: 1rem;
-    color: #fff;
 }
 
 /* End of Header and Nav */
@@ -304,7 +301,7 @@ a:hover {
     min-width: 100%;
     height: 100vh;
     margin: auto;
-    color: rgba(204, 204, 204, 0.9);
+    color: var(--light-font);
 }
 
 .welcome-logo {
@@ -327,7 +324,7 @@ a:hover {
 }
 
 .welcome-logo button {
-    background: rgba(255, 0, 0, 0.603);
+    background: var(--main-red);
     width: 12rem;
     height: 3rem;
     text-transform: uppercase;
@@ -336,7 +333,7 @@ a:hover {
     outline: none;
     font-size: 0.8rem;
     font-weight: 500;
-    color: rgb(204, 204, 204);
+    color: var(--light-font);
     border-radius: 3px;
     letter-spacing: 1.2;
     border: 1px rgba(61, 61, 61, 0.1) solid;
@@ -346,7 +343,7 @@ a:hover {
 
 .welcome-logo button:hover {
     background: rgba(61, 61, 61, 0.3);
-    border: 2px solid rgba(255, 0, 0, 0.603);
+    border: 2px solid var(--main-red);
     transition: all 0.3s ease;
 }
 
@@ -407,7 +404,7 @@ a:hover {
 }
 
 .about-info a:hover {
-    border-bottom: 3px solid rgb(255, 0, 0);
+    border-bottom: 3px solid var(--main-red);
     color: inherit;
 }
 
@@ -501,7 +498,7 @@ a:hover {
 }
 
 .day-month h3:first-child {
-    color: rgba(255, 0, 0, 0.8);
+    color: var(--main-red);
     text-align: left;
 }
 
@@ -677,7 +674,7 @@ a:hover {
 
 .contact-form form input:last-of-type {
     width: 50%;
-    background: rgb(255, 0, 0);
+    background: var(--main-red);
     color: rgb(255, 255, 255);
     border-radius: 3px;
     border: 2px rgba(61, 61, 61, 0.1) solid;
@@ -838,7 +835,7 @@ footer {
     }
 
     .welcome-logo button {
-        background: rgb(255, 0, 0);
+        background: var(--main-red);
     }
 
     .logo {
