@@ -13,12 +13,12 @@ url("./img/background2.png") no-repeat center center fixed`,
   url("./img/background3.png") no-repeat center center fixed`,
 ];
 
-// Function to change landing images
+// caches images, avoiding white flash between background replacements
+landingImg.forEach(function (img) {
+    new Image().src = img;
+});
 
-// landingImg.forEach(function (img) {
-//     new Image().src = img;
-//     // caches images, avoiding white flash between background replacements
-// });
+// Function to change landing images
 
 let counter = 0;
 

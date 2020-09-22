@@ -1,0 +1,6 @@
+-Language changer
+-Form validation
+-Nav bar opacity
+-Noreferrer/noopener on links
+-Tour section date spacing
+-Anchor tags (prevent default)
