@@ -240,16 +240,16 @@ for (let i = 0; i < menuOptions.length; i++) {
 
 // About section image carousel
 
-const size = carouselImages[0].clientWidth;
+// const size = carouselImages[0].clientWidth;
 
 // Flickity
 
 var elem = document.querySelector(".main-carousel");
 var flkty = new Flickity(elem, {
     // options
-    cellAlign: "left",
+    cellAlign: "center",
     contain: true,
-    imagesLoaded: true,
+    imagesLoaded: true
 });
 
 // element argument can be a selector string
