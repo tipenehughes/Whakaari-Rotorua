@@ -646,50 +646,98 @@ a:hover {
     background-color: rgb(201, 201, 201);
 }
 
-.contact-form {
+.form-container {
     flex: 1;
     height: 100%;
-    padding-top: 3rem;
+    padding-top: 2rem;
 }
 
-.contact-form form {
+.form {
     height: 100%;
     width: 80%;
     text-align: left;
     margin: auto;
 }
 
-.contact-form form input,
-.contact-form form textarea {
-    width: 100%;
-    height: 40px;
-    padding: 5px;
+.form-control {
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.form-control i {
+    position: absolute;
+    top: 38px;
+    right: 10px;
+    visibility: hidden;
+}
+
+.form-control small {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.form-control.success input, .form-control.success textarea {
+    border: 2px solid #2ecc71;    
+}
+
+.form-control.error input, .form-control.error textarea {
+    border: 2px solid #eb2929; 
+}
+
+.form-control.success i.fa-check-circle {
+    visibility: visible;
+    color: #2ecc71;
+}
+
+.form-control.error i.fa-exclamation-circle {
+    visibility: visible;
+    color: #eb2929;
+}
+
+.form-control.error small {
+    visibility: visible;
+    color: #eb2929;
+}
+
+.form label {
+    display: inline-block;
+    margin-bottom: 5px;
     font-size: 1.1rem;
-    margin: 5px 0 15px 0;
+}
+
+.form input,
+.form textarea {
+    width: 100%;
+    height: 40px;    
+    font-size: 1.1rem;
     border-radius: 3px;
     outline: none;
-    border: none;
     font-family: "Lato", sans-serif;
+    padding: 5px;
     line-height: 1.2;
     -webkit-font-smoothing: antialiased;
     font-smoothing: antialiased;
     border: 1px solid #dfe1e5;
 }
 
-.contact-form form input:hover,
-.contact-form form textarea:hover,
-.contact-form form input:focus,
-.contact-form form textarea:focus {
+.form input:hover,
+.form textarea:hover,
+.form input:focus,
+.form textarea:focus {
     border-color: rgba(223, 225, 229, 0);
     box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
 }
 
-.contact-form form textarea {
+.form textarea {
     height: 120px;
 }
 
-.contact-form form input:last-of-type {
+.form .form-submit {
     width: 50%;
+    margin-bottom: 15px;
     background: var(--main-red);
     color: rgb(255, 255, 255);
     border-radius: 3px;
@@ -697,11 +745,11 @@ a:hover {
     cursor: pointer;
 }
 
-.contact-form form input:last-of-type:hover {
+.form-submit:hover {
     box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.507);
 }
 
-.contact-form form input:last-of-type:active {
+.form-submit:active {
     transform: translateY(2px);
 }
 
@@ -709,7 +757,7 @@ a:hover {
     flex: 1;
     height: 100%;
     width: auto;
-    padding-top: 3rem;
+    padding-top: 1rem;
 }
 
 /* Footer */
@@ -900,10 +948,16 @@ footer {
         width: 100%;
     }
 
-    .contact-form form label {
-        display: none;
+    .form-container{
+        width: 100%;
     }
-    .contact-form form br {
+
+    .form {
+        margin: none;
+        padding: none;
+    }
+
+    .form label {
         display: none;
     }
     .facebook-area {
@@ -916,3 +970,10 @@ footer {
         margin: 1rem;
     } */
 }
+/* 
+.contact-form form input:valid,
+.contact-form form textarea:valid {
+    border: 1px solid rgb(48, 199, 21);
+    border-color: rgb(48, 199, 21);
+    box-shadow: 0 1px 6px 0 rgb(48, 199, 21);
+} */

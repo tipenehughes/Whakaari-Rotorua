@@ -314,28 +314,43 @@
                         ></a>
                     </div>
                     <div class="contact-area">
-                        <div class="contact-form">
-                            <form action="">
-                                <label for="name">Name</label><br />
-                                <input
-                                    type="text"
-                                    id="name"
-                                    placeholder="Name"
-                                /><br />
-                                <label for="email">Email</label><br />
-                                <input
-                                    type="text"
-                                    id="email"
-                                    placeholder="Email"
-                                /><br />
-                                <label for="message">Message</label><br />
-                                <textarea
-                                    name="message"
-                                    id="message"
-                                    placeholder="Message"
-                                ></textarea
-                                ><br />
-                                <input type="submit" />
+                        <div class="form-container">
+                            <form class="form" id="form" netlify>
+                                <div class="form-control">
+                                    <label for="name">Name</label><br />
+                                    <input
+                                        type="text"
+                                        id="name"
+                                        placeholder="Name"                                        
+                                    />
+                                    <i class="fas fa-check-circle"></i>
+                                    <i class="fas fa-exclamation-circle"></i>
+                                    <small class="small">Error Message</small>
+                                </div>
+                                <div class="form-control">
+                                    <label for="email">Email</label><br />
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        placeholder="Email"                                        
+                                    />
+                                    <i class="fas fa-check-circle"></i>
+                                    <i class="fas fa-exclamation-circle"></i>
+                                    <small>Error Message</small>
+                                </div>
+
+                                <div class="form-control">
+                                    <label for="message">Message</label><br />
+                                    <textarea
+                                        name="message"
+                                        id="message"
+                                        placeholder="Message"                                        
+                                    ></textarea>
+                                    <i class="fas fa-check-circle"></i>
+                                    <i class="fas fa-exclamation-circle"></i>
+                                    <small>Error Message</small>
+                                </div>
+                                <input class="form-submit" id="submit" type="submit" />
                             </form>
                         </div>
                         <div class="facebook-area">
@@ -344,7 +359,7 @@
                                 data-href="https://www.facebook.com/WhakaariRotorua/"
                                 data-tabs="timeline, events, messages"
                                 data-width="410"
-                                data-height="360"
+                                data-height="400"
                                 data-small-header="true"
                                 data-adapt-container-width="true"
                                 data-hide-cover="false"
