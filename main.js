@@ -14,9 +14,9 @@ url("./img/background2.png") no-repeat center center fixed`,
 ];
 
 // // caches images, avoiding white flash between background replacements
-// landingImg.forEach(function (img) {
-//     new Image().src = img;
-// });
+landingImg.forEach(function (img) {
+    new Image().src = img;
+});
 
 // Function to change landing images
 
@@ -243,7 +243,7 @@ function checkInputs() {
     }
     if (emailValue === "") {
         setErrorFor(email, "Email cannot be blank");
-    } else if(!isEmail(emailValue)) {
+    } else if (!isEmail(emailValue)) {
         setErrorFor(email, "Email is not valid");
     } else {
         setSuccessFor(email);
@@ -316,3 +316,46 @@ var flkty = new Flickity(elem, {
 var flkty = new Flickity(".main-carousel", {
     // options
 });
+
+const aboutNav = document.getElementById("aboutNav");
+const tourNav = document.getElementById("tourNav");
+const contactNav = document.getElementById("contactNav");
+const aboutContact = document.getElementById("aboutContact");
+const mobileNav = document.querySelectorAll(".mobile-menu-item");
+
+const contact = document.getElementById("contact");
+const about = document.getElementById("about");
+const tour = document.getElementById("tour");
+
+aboutNav.addEventListener("click", function (e) {
+    e.preventDefault();    
+    about.scrollIntoView({ behavior: "smooth", block: "start" });
+});
+
+contactNav.addEventListener("click", function (e) {
+    e.preventDefault();
+    contact.scrollIntoView({ behavior: "smooth", block: "start" });
+});
+
+tourNav.addEventListener("click", function (e) {
+    e.preventDefault();    
+    tour.scrollIntoView({ behavior: "smooth", block: "start" });
+});
+
+aboutContact.addEventListener("click", function (e) {
+    e.preventDefault();
+    contact.scrollIntoView({ behavior: "smooth", block: "start" });
+});
+
+for (let i = 0; i < mobileNav.length; i++) {
+    mobileNav[i].addEventListener("click", function (e) {
+        e.preventDefault();
+        if (mobileNav[i] == mobileNav[0]) {
+            about.scrollIntoView({ behavior: "smooth", block: "start" });
+        } else if (mobileNav[i] == mobileNav[1]) {
+            tour.scrollIntoView({ behavior: "smooth", block: "start" });
+        } else if (mobileNav[i] == mobileNav[2]) {
+            contact.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+    });
+}
