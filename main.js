@@ -1,38 +1,65 @@
 // Background Image carousel
 
-// Landing page section
+// // Landing page section
+// const background = document.getElementById("home");
+
+// // Array of landing page images
+// const landingImg = [
+//     `
+// url("./img/background1.png") no-repeat center center fixed`,
+//     `
+// url("./img/background2.png") no-repeat center center fixed`,
+//     `
+//   url("./img/background3.png") no-repeat center center fixed`,
+// ];
+
+// // // caches images, avoiding white flash between background replacements
+// landingImg.forEach(function (img) {
+//     new Image().src = img;
+// });
+
+// // Function to change landing images
+
+// let counter = 0;
+
+// function imgChange() {
+//     if (counter === landingImg.length - 1) {
+//         counter = 0;
+//     } else {
+//         counter++;
+//     }
+//     background.style.background = landingImg[counter];
+//     background.style.backgroundSize = "cover";
+// }
+
+// setInterval(imgChange, 6000);
+
+
+const landingImg = ["./img/background1.png", "./img/background2.png", "./img/background3.png"];
+const secs = 8;
 const background = document.getElementById("home");
-
-// Array of landing page images
-const landingImg = [
-    `
-url("./img/background1.png") no-repeat center center fixed`,
-    `
-url("./img/background2.png") no-repeat center center fixed`,
-    `
-  url("./img/background3.png") no-repeat center center fixed`,
-];
-
-// // caches images, avoiding white flash between background replacements
-landingImg.forEach(function (img) {
-    new Image().src = img;
+landingImg.forEach(function(img){
+    new Image().src = img; 
+    // caches images, avoiding white flash between background replacements
 });
 
-// Function to change landing images
-
-let counter = 0;
-
-function imgChange() {
-    if (counter === landingImg.length - 1) {
-        counter = 0;
-    } else {
-        counter++;
-    }
-    background.style.background = landingImg[counter];
-    background.style.backgroundSize = "cover";
+function backgroundSequence() {
+	window.clearTimeout();
+	let k = 0;
+	for (i = 0; i < landingImg.length; i++) {
+		setTimeout(function(){ 
+			background.style.background = "url(" + landingImg[k] + ") no-repeat center center fixed";
+			background.style.backgroundSize ="cover";
+		if ((k + 1) === landingImg.length) { setTimeout(function() { backgroundSequence() }, (secs * 1000))} else { k++; }			
+		}, (secs * 1000) * i)	
+	}
 }
+backgroundSequence();
 
-setInterval(imgChange, 6000);
+
+
+
+
 
 // Whakaari Logo Home button
 const homeBtn = document.querySelectorAll(".logoBtn");
