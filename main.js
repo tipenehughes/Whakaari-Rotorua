@@ -34,32 +34,37 @@
 
 // setInterval(imgChange, 6000);
 
-
-const landingImg = ["./img/background1.png", "./img/background2.png", "./img/background3.png"];
+const landingImg = [
+    "./img/background1.png",
+    "./img/background2.png",
+    "./img/background3.png",
+];
 const secs = 8;
 const background = document.getElementById("home");
-landingImg.forEach(function(img){
-    new Image().src = img; 
+landingImg.forEach(function (img) {
+    new Image().src = img;
     // caches images, avoiding white flash between background replacements
 });
 
 function backgroundSequence() {
-	window.clearTimeout();
-	let k = 0;
-	for (i = 0; i < landingImg.length; i++) {
-		setTimeout(function(){ 
-			background.style.background = "url(" + landingImg[k] + ") no-repeat center center fixed";
-			background.style.backgroundSize ="cover";
-		if ((k + 1) === landingImg.length) { setTimeout(function() { backgroundSequence() }, (secs * 1000))} else { k++; }			
-		}, (secs * 1000) * i)	
-	}
+    window.clearTimeout();
+    let k = 0;
+    for (i = 0; i < landingImg.length; i++) {
+        setTimeout(function () {
+            background.style.background =
+                "url(" + landingImg[k] + ") no-repeat center center fixed";
+            background.style.backgroundSize = "cover";
+            if (k + 1 === landingImg.length) {
+                setTimeout(function () {
+                    backgroundSequence();
+                }, secs * 1000);
+            } else {
+                k++;
+            }
+        }, secs * 1000 * i);
+    }
 }
 backgroundSequence();
-
-
-
-
-
 
 // Whakaari Logo Home button
 const homeBtn = document.querySelectorAll(".logoBtn");
@@ -76,18 +81,18 @@ for (let i = 0; i < homeBtn.length; i++) {
 
 // Home page scroll to about button
 const scrollDown = document.getElementById("scroll-down");
-const aboutSection = document.getElementById("about");
 
 scrollDown.addEventListener("click", () => {
+    const aboutSection = document.getElementById("about");
     aboutSection.scrollIntoView();
 });
 
 // Home page see upcoming events button
 
 const tourButton = document.getElementById("seeTours");
-const tourSection = document.getElementById("tour");
 
 tourButton.addEventListener("click", () => {
+    const tourSection = document.getElementById("tour");
     tourSection.scrollIntoView();
 });
 
@@ -355,7 +360,7 @@ const about = document.getElementById("about");
 const tour = document.getElementById("tour");
 
 aboutNav.addEventListener("click", function (e) {
-    e.preventDefault();    
+    e.preventDefault();
     about.scrollIntoView({ behavior: "smooth", block: "start" });
 });
 
@@ -365,7 +370,7 @@ contactNav.addEventListener("click", function (e) {
 });
 
 tourNav.addEventListener("click", function (e) {
-    e.preventDefault();    
+    e.preventDefault();
     tour.scrollIntoView({ behavior: "smooth", block: "start" });
 });
 
