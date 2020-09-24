@@ -168,7 +168,9 @@
                         group leader Frank Grapl Junior, as his father,
                         František Grapl, emigrated to New Zealand in 1950.
                     </p>
-                    <a id="aboutContact" href="#contact">Contact Us to Book an Event</a>
+                    <a id="aboutContact" href="#contact"
+                        >Contact Us to Book an Event</a
+                    >
                 </div>
                 <!-- Carousel -->
                 <div
@@ -315,13 +317,18 @@
                     </div>
                     <div class="contact-area">
                         <div class="form-container">
-                            <form class="form" id="form" netlify>
+                            <form
+                                class="form"
+                                id="form"
+                                method="POST"
+                                data-netlify="true"
+                            >
                                 <div class="form-control">
                                     <label for="name">Name</label><br />
                                     <input
                                         type="text"
                                         id="name"
-                                        placeholder="Name"                                        
+                                        placeholder="Name"
                                     />
                                     <i class="fas fa-check-circle"></i>
                                     <i class="fas fa-exclamation-circle"></i>
@@ -332,7 +339,7 @@
                                     <input
                                         type="email"
                                         id="email"
-                                        placeholder="Email"                                        
+                                        placeholder="Email"
                                     />
                                     <i class="fas fa-check-circle"></i>
                                     <i class="fas fa-exclamation-circle"></i>
@@ -344,13 +351,17 @@
                                     <textarea
                                         name="message"
                                         id="message"
-                                        placeholder="Message"                                        
+                                        placeholder="Message"
                                     ></textarea>
                                     <i class="fas fa-check-circle"></i>
                                     <i class="fas fa-exclamation-circle"></i>
                                     <small>Error Message</small>
                                 </div>
-                                <input class="form-submit" id="submit" type="submit" />
+                                <input
+                                    class="form-submit"
+                                    id="submitBtn"
+                                    type="submit"
+                                />
                             </form>
                         </div>
                         <div class="facebook-area">

@@ -255,7 +255,7 @@ const name = document.getElementById("name");
 const email = document.getElementById("email");
 const message = document.getElementById("message");
 
-const submit = document.getElementById("submit");
+const submitBtn = document.getElementById("submit");
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -284,6 +284,15 @@ function checkInputs() {
         setErrorFor(message, "Message cannot be blank");
     } else {
         setSuccessFor(message);
+    }
+
+    if (
+        nameValue !== "" &&
+        messageValue !== "" &&
+        emailValue !== "" &&
+        isEmail(emailValue)
+    ) {
+        form.submit();
     }
 }
 
