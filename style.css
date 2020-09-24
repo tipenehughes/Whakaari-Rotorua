@@ -292,14 +292,38 @@ a:hover {
     text-align: center;
 }
 
+.logo.nav-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .mobile-nav-options li {
-    margin: 2rem;
+    margin: 0.5rem;
 }
 
 .mobile-nav-options li a {
     color: var(--light-font);
     font-weight: 300;
     font-size: 3rem;
+}
+
+.mobile-lang-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.mobile-lang {
+    width: 100%;
+    height: auto;
+    line-height: 1;
+}
+
+.mobile-lang img {
+    width: 5rem;
+    height: auto;
+    padding: 1rem;
 }
 
 .mobile-logo {
