@@ -159,95 +159,6 @@ langContainer.addEventListener("mouseleave", () => {
     }, 200);
 });
 
-// Language details change on click
-
-const english = document.querySelectorAll('[lang="en"]');
-const czech = document.querySelectorAll('[lang="cz"]');
-const german = document.querySelectorAll('[lang="de"]');
-const polish = document.querySelectorAll('[lang="pl"]');
-
-const displayNone = {
-    Cz: czech.forEach((i) => {
-        i.style.display = "none";
-    }),
-    De: german.forEach((i) => {
-        i.style.display = "none";
-    }),
-    Pl: polish.forEach((i) => {
-        i.style.display = "none";
-    }),
-    En: english.forEach((i) => {
-        i.style.display = "none";
-    }),
-};
-
-english.forEach((i) => {
-    i.style.display = "block";
-});
-
-const langActive = document.querySelector(".langActive");
-const langList = Array.from(document.querySelectorAll(".langList"));
-
-langList.forEach((item) => {
-    item.addEventListener("click", (e) => {
-        let flagName = {
-            flag: e.currentTarget.childNodes[1].src,
-            name: e.currentTarget.childNodes[3].innerHTML,
-        };
-        e.currentTarget.childNodes[1].src = langActive.childNodes[1].src;
-        e.currentTarget.childNodes[3].innerHTML =
-            langActive.childNodes[3].innerHTML;
-
-        langActive.childNodes[1].src = flagName.flag;
-        langActive.childNodes[3].innerHTML = flagName.name;
-
-        const displayNone = {
-            Cz: czech.forEach((i) => {
-                i.style.display = "none";
-            }),
-            De: german.forEach((i) => {
-                i.style.display = "none";
-            }),
-            Pl: polish.forEach((i) => {
-                i.style.display = "none";
-            }),
-            En: english.forEach((i) => {
-                i.style.display = "none";
-            }),
-        };
-
-        if (langActive.childNodes[1].src.includes("english")) {
-            displayNone.Cz;
-            displayNone.De;
-            displayNone.Pl;
-            english.forEach((i) => {
-                i.style.display = "block";
-            });
-        } else if (langActive.childNodes[1].src.includes("czech")) {
-            displayNone.En;
-            displayNone.De;
-            displayNone.Pl;
-            czech.forEach((i) => {
-                i.style.display = "block";
-            });
-        } else if (langActive.childNodes[1].src.includes("german")) {
-            displayNone.Cz;
-            displayNone.De;
-            displayNone.Pl;
-            german.forEach((i) => {
-                i.style.display = "block";
-            });
-        } else if (langActive.childNodes[1].src.includes("polish")) {
-            displayNone.En;
-            displayNone.De;
-            displayNone.Cz;
-            polish.forEach((i) => {
-                i.style.display = "block";
-            });
-        }
-    });
-});
-
 // Form Validation
 
 const form = document.getElementById("form");
@@ -339,8 +250,6 @@ for (let i = 0; i < menuOptions.length; i++) {
 }
 
 // About section image carousel
-
-// const size = carouselImages[0].clientWidth;
 
 // Flickity
 

@@ -21,13 +21,13 @@
             href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Patua+One&family=Poiret+One&display=swap"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="flickity/flickity.min.css" />
-        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="../flickity/flickity.min.css" />
+        <link rel="stylesheet" href="../style.css" />
         <script
             src="https://kit.fontawesome.com/b0e932b144.js"
             crossorigin="anonymous"
         ></script>
-        <script src="flickity/flickity.pkgd.min.js"></script>
+        <script src="../flickity/flickity.pkgd.min.js"></script>
 
         <title>Whakaari Rotorua</title>
     </head>
@@ -52,13 +52,13 @@
                 <nav class="navbar">
                     <ul>
                         <li>
-                            <a id="aboutNav" href="#about">About</a>
+                            <a id="aboutNav" href="#about">Über</a>
                         </li>
                         <li>
                             <a id="tourNav" href="#tour">Tour</a>
                         </li>
                         <li>
-                            <a id="contactNav" href="#contact">Contact</a>
+                            <a id="contactNav" href="#contact">Kontakt</a>
                         </li>
                     </ul>
                 </nav>
@@ -67,19 +67,29 @@
                         class="languages-container drop-down"
                         id="langContainer"
                     >
-                        <a class="langActive" href="./index.html">
+                        <a class="langActive" href="">
                             <img
-                                src="./img/lang/english.png"
-                                id="en"
-                                alt="English"
+                                src="./img/lang/german.png"
+                                id="de"
+                                alt="German"
                             />
-                            <p>En</p>
+                            <p>De</p>
                         </a>
 
                         <div class="drop-down-content">
                             <ul>
                                 <li class="langList">
-                                    <a class="langList" href="./Different language pages/index-cz.html">
+                                    <a class="langList" href="../index.html">
+                                        <img
+                                            src="./img/lang/English.png"
+                                            id="en"
+                                            alt="English"
+                                        />
+                                        <p>En</p>
+                                    </a>
+                                </li>
+                                <li class="langList">
+                                    <a class="langList" href="./index-cz.html">
                                         <img
                                             src="./img/lang/czech.png"
                                             id="cz"
@@ -89,17 +99,7 @@
                                     </a>
                                 </li>
                                 <li class="langList">
-                                    <a class="langList" href="./Different language pages/index-de.html">
-                                        <img
-                                            src="./img/lang/german.png"
-                                            id="de"
-                                            alt="German"
-                                        />
-                                        <p>De</p>
-                                    </a>
-                                </li>
-                                <li class="langList">
-                                    <a class="langList" href="./Different language pages/index-pl.html">
+                                    <a class="langList" href="./index-pl.html">
                                         <img
                                             src="./img/lang/polish.png"
                                             id="pl"
@@ -136,14 +136,14 @@
                             </div>
                         </li>
                         <li>
-                            <a class="mobile-menu-item" href="#about">About</a>
+                            <a class="mobile-menu-item" href="#about">Über</a>
                         </li>
                         <li>
                             <a class="mobile-menu-item" href="#tour">Tour</a>
                         </li>
                         <li>
                             <a class="mobile-menu-item" href="#contact"
-                                >Contact</a
+                                >Kontakt</a
                             >
                         </li>
                     </ul>
@@ -164,12 +164,12 @@
                     <div class="welcome">
                         <h1>Kia Ora!</h1>
                         <p lang="en">
-                            From Aotearoa/New Zealand,<br />
-                            to the World.
+                            Von Aotearoa/Neuseeland<br />
+                            in die Welt.
                         </p>
                     </div>
                     <button id="seeTours">
-                        <span lang="en">See Upcoming Tour</span>
+                        <span lang="en">Siehe Kommend Tour</span>
                     </button>
                 </div>
                 <div id="scroll-down">
@@ -178,20 +178,22 @@
             </section>
             <section class="container" id="about">
                 <div class="about-wrapper">
-                    <h2>About us</h2>
+                    <h2>Über uns</h2>
                     <span class="header-span"></span>
-                    <h3>Bringing Māori Soul to the Heart of Europe</h3>
+                    <h3>Māori-Seele ins Herz Europas bringen</h3>
                     <p>
-                        Whakaari Rotorua are a group of performers from Rotorua,
-                        New Zealand, who travel around the world sharing their
-                        Māori culture through traditional song and dance. They
-                        specifically travel to the Czech Republic often as they
-                        have a deep connection to this country – especially
-                        group leader Frank Grapl Junior, as his father,
-                        František Grapl, emigrated to New Zealand in 1950.
+                        Whakaari Rotorua ist eine Gruppe von Künstlern aus
+                        Rotorua, Neuseeland, die um die Welt reisen und ihre
+                        Māori-Kultur durch traditionelles Lied und Tanz teilen.
+                        Sie reisen speziell häufig in die Tschechische Republik,
+                        da sie eine tiefe Verbindung zu diesem Land haben -
+                        insbesondere Gruppenleiter Frank Grapl Junior, als sein
+                        Vater, František Grapl, 1950 nach Neuseeland
+                        auswanderte.
                     </p>
                     <a id="aboutContact" href="#contact"
-                        >Contact Us to Book an Event</a
+                        >Kontaktieren Sie uns, um eine Veranstaltung zu
+                        buchen</a
                     >
                 </div>
                 <!-- Carousel -->
@@ -200,26 +202,26 @@
                     data-flickity='{ "wrapAround": true, "autoPlay": 5000, "fullscreen": true}'
                 >
                     <div class="carousel-cell">
-                        <img src="./img/slide1.jpg" alt="" />
+                        <img src="../img/slide1.jpg" alt="" />
                     </div>
                     <div class="carousel-cell">
-                        <img src="./img/slide2.jpg" alt="" />
+                        <img src="../img/slide2.jpg" alt="" />
                     </div>
                     <div class="carousel-cell">
-                        <img src="./img/slide3.jpg" alt="" />
+                        <img src="../img/slide3.jpg" alt="" />
                     </div>
                     <div class="carousel-cell">
-                        <img src="./img/slide4.jpg" alt="" />
+                        <img src="../img/slide4.jpg" alt="" />
                     </div>
                     <div class="carousel-cell">
-                        <img src="./img/slide5.jpg" alt="" />
+                        <img src="../img/slide5.jpg" alt="" />
                     </div>
                 </div>
             </section>
             <section class="container" id="tour">
                 <div class="tour-wrapper">
                     <div class="tour-header">
-                        <h2>Upcoming Tour Dates</h2>
+                        <h2>Kommende Tourdaten</h2>
                         <span class="header-span"></span>
                     </div>
                     <div class="tour-dates">
@@ -229,7 +231,7 @@
                                     <h2>12</h2>
                                 </div>
                                 <div class="day-month">
-                                    <h3>Fri</h3>
+                                    <h3>Fr</h3>
                                     <h3>Nov</h3>
                                 </div>
                             </div>
@@ -246,7 +248,7 @@
                                     <h2>13</h2>
                                 </div>
                                 <div class="day-month">
-                                    <h3>Sat</h3>
+                                    <h3>Sa</h3>
                                     <h3>Nov</h3>
                                 </div>
                             </div>
@@ -263,7 +265,7 @@
                                     <h2>16</h2>
                                 </div>
                                 <div class="day-month">
-                                    <h3>Tues</h3>
+                                    <h3>Di</h3>
                                     <h3>Nov</h3>
                                 </div>
                             </div>
@@ -280,7 +282,7 @@
                                     <h2>20</h2>
                                 </div>
                                 <div class="day-month">
-                                    <h3>Sat</h3>
+                                    <h3>Sa</h3>
                                     <h3>Nov</h3>
                                 </div>
                             </div>
@@ -310,15 +312,16 @@
             </section>
             <section class="container" id="contact">
                 <div class="contact-wrapper">
-                    <h1 class="contact-header">Contact Us</h1>
+                    <h1 class="contact-header">Kontaktiere uns</h1>
                     <span class="header-span"></span>
                     <p class="contact-text">
-                        To contact us about an event booking, to find out more
-                        about what we do, or just to say Kia Ora! - please fill
-                        out and submit the form below or visit any of our social
-                        media pages to send us a message.
+                        Um uns wegen einer Eventbuchung zu kontaktieren, mehr
+                        über unsere Aktivitäten zu erfahren oder einfach nur Kia
+                        Ora zu sagen! - Bitte füllen Sie das folgende Formular
+                        aus und senden Sie es ab oder besuchen Sie eine unserer
+                        Social-Media-Seiten, um uns eine Nachricht zu senden.
                         <br />
-                        We look forward to hearing from you!
+                        Wir freuen uns von Ihnen zu hören!
                     </p>
                     <div class="social-icons">
                         <a
@@ -372,11 +375,11 @@
                                 </div>
 
                                 <div class="form-control">
-                                    <label for="message">Message</label><br />
+                                    <label for="message">Nachricht</label><br />
                                     <textarea
                                         name="message"
                                         id="message"
-                                        placeholder="Message"
+                                        placeholder="Nachricht"
                                     ></textarea>
                                     <i class="fas fa-check-circle"></i>
                                     <i class="fas fa-exclamation-circle"></i>
@@ -437,14 +440,14 @@
                 </div>
                 <div class="footer-item footer-nav">
                     <ul>
-                        <a href="#home"><li>Home</li></a>
-                        <a href="#about"><li>About</li></a>
+                        <a href="#home"><li>Startseite</li></a>
+                        <a href="#about"><li>Über</li></a>
                         <a href="#tour"><li>Tour</li></a>
-                        <a href="#contact"><li>Contact</li></a>
+                        <a href="#contact"><li>Kontakt</li></a>
                     </ul>
                 </div>
                 <div class="footer-item footer-sponsor">
-                    <p>Proud partners of</p>
+                    <p>Stolzer Partner von</p>
                     <a href="https://www.aotearoa.cz/" target="_blank"
                         ><img src="./img/go2small.png" alt=""
                     /></a>
@@ -455,6 +458,6 @@
             </div>
         </footer>
 
-        <script src="main.js"></script>
+        <script src="../main.js"></script>
     </body>
 </html>

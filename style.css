@@ -179,7 +179,15 @@ a:hover {
     justify-content: space-evenly;
     align-items: center;
     font-size: 0.9rem;
+    font-weight: 700;
     margin: auto;
+}
+
+.langActive:hover {
+    border-bottom: none;
+    color: inherit;
+    margin-bottom: 0;
+    transition: all 0.2s ease;
 }
 
 .langActive img {
@@ -222,10 +230,16 @@ a:hover {
     width: 100%;
     padding: 0.2rem 0 0.2rem 0;
     cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 700;
 }
 
 .langList:hover {
     background-color: rgba(61, 61, 61, 0.9);
+    border-bottom: none;
+    color: inherit;
+    margin-bottom: 0;
+    transition: all 0.2s ease;
 }
 /* Mobile Nav */
 
@@ -459,19 +473,19 @@ a:hover {
 /* position dots in carousel */
 .flickity-page-dots {
     bottom: 5px;
-  }
-  /* white circles */
-  .flickity-page-dots .dot {
+}
+/* white circles */
+.flickity-page-dots .dot {
     width: 12px;
     height: 12px;
     opacity: 1;
     background: transparent;
     border: 2px solid white;
-  }
-  /* fill-in selected dot */
-  .flickity-page-dots .dot.is-selected {
+}
+/* fill-in selected dot */
+.flickity-page-dots .dot.is-selected {
     background: white;
-  }
+}
 /* Tour section */
 
 .tour-wrapper {
@@ -679,12 +693,14 @@ a:hover {
     visibility: hidden;
 }
 
-.form-control.success input, .form-control.success textarea {
-    border: 2px solid #2ecc71;    
+.form-control.success input,
+.form-control.success textarea {
+    border: 2px solid #2ecc71;
 }
 
-.form-control.error input, .form-control.error textarea {
-    border: 2px solid #eb2929; 
+.form-control.error input,
+.form-control.error textarea {
+    border: 2px solid #eb2929;
 }
 
 .form-control.success i.fa-check-circle {
@@ -711,7 +727,7 @@ a:hover {
 .form input,
 .form textarea {
     width: 100%;
-    height: 40px;    
+    height: 40px;
     font-size: 1.1rem;
     border-radius: 3px;
     outline: none;
@@ -948,7 +964,7 @@ footer {
         width: 100%;
     }
 
-    .form-container{
+    .form-container {
         width: 100%;
     }
 

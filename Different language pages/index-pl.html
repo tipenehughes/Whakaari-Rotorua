@@ -21,13 +21,13 @@
             href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Patua+One&family=Poiret+One&display=swap"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="flickity/flickity.min.css" />
-        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="../flickity/flickity.min.css" />
+        <link rel="stylesheet" href="../style.css" />
         <script
             src="https://kit.fontawesome.com/b0e932b144.js"
             crossorigin="anonymous"
         ></script>
-        <script src="flickity/flickity.pkgd.min.js"></script>
+        <script src="../flickity/flickity.pkgd.min.js"></script>
 
         <title>Whakaari Rotorua</title>
     </head>
@@ -52,13 +52,13 @@
                 <nav class="navbar">
                     <ul>
                         <li>
-                            <a id="aboutNav" href="#about">About</a>
+                            <a id="aboutNav" href="#about">O Nas</a>
                         </li>
                         <li>
-                            <a id="tourNav" href="#tour">Tour</a>
+                            <a id="tourNav" href="#tour">Tournee</a>
                         </li>
                         <li>
-                            <a id="contactNav" href="#contact">Contact</a>
+                            <a id="contactNav" href="#contact">Kontakt</a>
                         </li>
                     </ul>
                 </nav>
@@ -67,29 +67,29 @@
                         class="languages-container drop-down"
                         id="langContainer"
                     >
-                        <a class="langActive" href="./index.html">
+                        <a class="langActive" href="./index-pl.html">
                             <img
-                                src="./img/lang/english.png"
-                                id="en"
-                                alt="English"
+                                src="./img/lang/polish.png"
+                                id="pl"
+                                alt="polish"
                             />
-                            <p>En</p>
+                            <p>Pl</p>
                         </a>
 
                         <div class="drop-down-content">
                             <ul>
                                 <li class="langList">
-                                    <a class="langList" href="./Different language pages/index-cz.html">
+                                    <a class="langList" href="../index.html">
                                         <img
-                                            src="./img/lang/czech.png"
-                                            id="cz"
-                                            alt="Czech"
+                                            src="./img/lang/english.png"
+                                            id="en"
+                                            alt="English"
                                         />
-                                        <p>Cz</p>
+                                        <p>En</p>
                                     </a>
                                 </li>
                                 <li class="langList">
-                                    <a class="langList" href="./Different language pages/index-de.html">
+                                    <a class="langList" href="./index-de.html">
                                         <img
                                             src="./img/lang/german.png"
                                             id="de"
@@ -99,13 +99,13 @@
                                     </a>
                                 </li>
                                 <li class="langList">
-                                    <a class="langList" href="./Different language pages/index-pl.html">
+                                    <a class="langList" href="./index-cz.html">
                                         <img
-                                            src="./img/lang/polish.png"
-                                            id="pl"
-                                            alt="polish"
+                                            src="./img/lang/czech.png"
+                                            id="cz"
+                                            alt="Czech"
                                         />
-                                        <p>Pl</p>
+                                        <p>Cz</p>
                                     </a>
                                 </li>
                             </ul>
@@ -136,14 +136,14 @@
                             </div>
                         </li>
                         <li>
-                            <a class="mobile-menu-item" href="#about">About</a>
+                            <a class="mobile-menu-item" href="#about">O Nas</a>
                         </li>
                         <li>
-                            <a class="mobile-menu-item" href="#tour">Tour</a>
+                            <a class="mobile-menu-item" href="#tour">Tournee</a>
                         </li>
                         <li>
                             <a class="mobile-menu-item" href="#contact"
-                                >Contact</a
+                                >Kontakt</a
                             >
                         </li>
                     </ul>
@@ -164,12 +164,14 @@
                     <div class="welcome">
                         <h1>Kia Ora!</h1>
                         <p lang="en">
-                            From Aotearoa/New Zealand,<br />
-                            to the World.
+                            Z Aotearoa/Nowej Zelandii, <br />
+                            na Świat.
                         </p>
                     </div>
                     <button id="seeTours">
-                        <span lang="en">See Upcoming Tour</span>
+                        <span lang="en"
+                            >Zobacz nadchodzącą trasę koncertową</span
+                        >
                     </button>
                 </div>
                 <div id="scroll-down">
@@ -178,20 +180,21 @@
             </section>
             <section class="container" id="about">
                 <div class="about-wrapper">
-                    <h2>About us</h2>
+                    <h2>O Nas</h2>
                     <span class="header-span"></span>
-                    <h3>Bringing Māori Soul to the Heart of Europe</h3>
+                    <h3>Przenoszenie Duszy Maorysów Do Serca Europy</h3>
                     <p>
-                        Whakaari Rotorua are a group of performers from Rotorua,
-                        New Zealand, who travel around the world sharing their
-                        Māori culture through traditional song and dance. They
-                        specifically travel to the Czech Republic often as they
-                        have a deep connection to this country – especially
-                        group leader Frank Grapl Junior, as his father,
-                        František Grapl, emigrated to New Zealand in 1950.
+                        Whakaari Rotorua to grupa wykonawców z Rotorua w Nowej
+                        Zelandii, którzy podróżują po całym świecie, dzieląc się
+                        swoją kulturą Maorysów poprzez tradycyjne pieśni i
+                        tańce. Szczególnie często podróżują do Czech, ponieważ
+                        mają głębokie powiązania z tym krajem - zwłaszcza lider
+                        grupy Frank Grapl Junior, ponieważ jego ojciec,
+                        František Grapl, wyemigrował do Nowej Zelandii w 1950
+                        roku.
                     </p>
                     <a id="aboutContact" href="#contact"
-                        >Contact Us to Book an Event</a
+                        >Skontaktuj się z nami, aby zarezerwować wydarzenie</a
                     >
                 </div>
                 <!-- Carousel -->
@@ -219,7 +222,7 @@
             <section class="container" id="tour">
                 <div class="tour-wrapper">
                     <div class="tour-header">
-                        <h2>Upcoming Tour Dates</h2>
+                        <h2>Najbliższe Daty Tras Koncertowych</h2>
                         <span class="header-span"></span>
                     </div>
                     <div class="tour-dates">
@@ -310,15 +313,16 @@
             </section>
             <section class="container" id="contact">
                 <div class="contact-wrapper">
-                    <h1 class="contact-header">Contact Us</h1>
+                    <h1 class="contact-header">Skontaktuj Się z Nami</h1>
                     <span class="header-span"></span>
                     <p class="contact-text">
-                        To contact us about an event booking, to find out more
-                        about what we do, or just to say Kia Ora! - please fill
-                        out and submit the form below or visit any of our social
-                        media pages to send us a message.
+                        Aby skontaktować się z nami w sprawie rezerwacji
+                        wydarzenia, dowiedzieć się więcej o tym, co robimy lub
+                        po prostu powiedzieć Kia Ora! - wypełnij i prześlij
+                        poniższy formularz lub odwiedź jedną z naszych stron w
+                        mediach społecznościowych, aby wysłać nam wiadomość.
                         <br />
-                        We look forward to hearing from you!
+                        Oczekujemy na kontakt zwrotny!
                     </p>
                     <div class="social-icons">
                         <a
@@ -347,12 +351,12 @@
                                 data-netlify="true"
                             >
                                 <div class="form-control">
-                                    <label for="name">Name</label><br />
+                                    <label for="name">Imię</label><br />
                                     <input
                                         type="text"
                                         name="name"
                                         id="name"
-                                        placeholder="Name"
+                                        placeholder="Imię"
                                     />
                                     <i class="fas fa-check-circle"></i>
                                     <i class="fas fa-exclamation-circle"></i>
@@ -372,11 +376,11 @@
                                 </div>
 
                                 <div class="form-control">
-                                    <label for="message">Message</label><br />
+                                    <label for="message">Wiadomość</label><br />
                                     <textarea
                                         name="message"
                                         id="message"
-                                        placeholder="Message"
+                                        placeholder="Wiadomość"
                                     ></textarea>
                                     <i class="fas fa-check-circle"></i>
                                     <i class="fas fa-exclamation-circle"></i>
@@ -437,14 +441,14 @@
                 </div>
                 <div class="footer-item footer-nav">
                     <ul>
-                        <a href="#home"><li>Home</li></a>
-                        <a href="#about"><li>About</li></a>
-                        <a href="#tour"><li>Tour</li></a>
-                        <a href="#contact"><li>Contact</li></a>
+                        <a href="#home"><li>Strona Główna</li></a>
+                        <a href="#about"><li>O Nas</li></a>
+                        <a href="#tour"><li>Tournee</li></a>
+                        <a href="#contact"><li>Kontakt</li></a>
                     </ul>
                 </div>
                 <div class="footer-item footer-sponsor">
-                    <p>Proud partners of</p>
+                    <p>Dumni partnerzy</p>
                     <a href="https://www.aotearoa.cz/" target="_blank"
                         ><img src="./img/go2small.png" alt=""
                     /></a>
@@ -455,6 +459,6 @@
             </div>
         </footer>
 
-        <script src="main.js"></script>
+        <script src="../main.js"></script>
     </body>
 </html>
