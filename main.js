@@ -1,42 +1,4 @@
-// Background Image carousel
-
-// // Landing page section
-// const background = document.getElementById("home");
-
-// // Array of landing page images
-// const landingImg = [
-//     `
-// url("./img/background1.png") no-repeat center center fixed`,
-//     `
-// url("./img/background2.png") no-repeat center center fixed`,
-//     `
-//   url("./img/background3.png") no-repeat center center fixed`,
-// ];
-
-// // // caches images, avoiding white flash between background replacements
-// landingImg.forEach(function (img) {
-//     new Image().src = img;
-// });
-
-// // Function to change landing images
-
-// let counter = 0;
-
-// function imgChange() {
-//     if (counter === landingImg.length - 1) {
-//         counter = 0;
-//     } else {
-//         counter++;
-//     }
-//     background.style.background = landingImg[counter];
-//     background.style.backgroundSize = "cover";
-// }
-
-// setInterval(imgChange, 6000);
-
-// landingImg.forEach(function (img) {
-//     new Image().src = img;
-// });
+// Landing image preload to avoid flashing between images
 
 function preloadImages(array) {
     if (!preloadImages.list) {
@@ -63,6 +25,8 @@ preloadImages([
     "./img/background2.png",
     "./img/background3.png",
 ]);
+
+// Landing page image carousel
 
 const landingImg = [
     "./img/background1.png",
@@ -276,9 +240,7 @@ for (let i = 0; i < menuOptions.length; i++) {
     });
 }
 
-// About section image carousel
-
-// Flickity
+// About section image carousel - Flickity
 
 var elem = document.querySelector(".main-carousel");
 var flkty = new Flickity(elem, {
@@ -293,6 +255,8 @@ var flkty = new Flickity(elem, {
 var flkty = new Flickity(".main-carousel", {
     // options
 });
+
+// Internal navigation
 
 const aboutNav = document.getElementById("aboutNav");
 const tourNav = document.getElementById("tourNav");
