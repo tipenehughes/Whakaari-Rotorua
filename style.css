@@ -7,8 +7,9 @@
     list-style: none;
     scroll-behavior: smooth;
     --main-red: rgb(187, 0, 0);
-    --light-font: rgb(204, 204, 204);
-    --background-color: rgb(231, 231, 231);
+    --light-font: rgb(238, 238, 238);
+    --background-color: rgb(221, 221, 221);
+    --footer-color: rgba(204, 204, 204, 0.9)
 }
 
 body {
@@ -87,7 +88,7 @@ a:hover {
 }
 
 .rotorua-down-action {
-    font-size: 0.82rem;
+    font-size: 0.82rem !important;
 }
 
 /* Logo */
@@ -106,10 +107,14 @@ a:hover {
 }
 
 .logo h1,
-.logo h3 {
+.logo h2 {
     overflow: hidden;
     transition: all 0.5s ease;
     font-weight: 400;
+}
+
+.logo h2 {
+    font-size: 1.2rem;
 }
 
 .logo-span {
@@ -345,7 +350,7 @@ a:hover {
 }
 
 .mobile-logo h1,
-.mobile-logo h3 {
+.mobile-logo h2 {
     font-weight: 400;
 }
 
@@ -353,8 +358,8 @@ a:hover {
     font-size: 1.5rem;
 }
 
-.mobile-logo h3 {
-    font-size: 0.87rem;
+.mobile-logo h2 {
+    font-size: 1.2rem;
 }
 
 .mobile-logo-span {
@@ -363,6 +368,10 @@ a:hover {
     height: 2px;
     background-color: var(--main-red);
     margin: auto auto 2px auto;
+}
+
+.mobile-nav .logoBtn h2 {
+    font-size: 2.3rem;
 }
 
 /* End of Header and Nav */
@@ -387,7 +396,7 @@ a:hover {
     margin-bottom: -2rem;
 }
 
-.welcome h1 {
+.welcome h2 {
     font-size: 5rem;
     line-height: 1.5;
 }
@@ -815,7 +824,7 @@ footer {
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: rgba(204, 204, 204, 0.9);
+    color: var(--footer-color);
 }
 
 .footer-item {
@@ -823,6 +832,12 @@ footer {
     background-color: #000;
     height: 100%;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-item ul {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -850,19 +865,19 @@ footer {
 .footer-nav {
     justify-content: space-around;
     line-height: 2;
-    color: rgba(204, 204, 204, 0.9);
+    color: var(--footer-color);
     text-transform: uppercase;
 }
 
 .footer-nav a {
-    color: rgba(204, 204, 204, 0.9);
-    font-size: 0.9rem;
+    color: var(--footer-color);
+    font-size: 1rem;
     margin: 0 1rem -3px 1rem;
 }
 
 .footer-nav a:hover {
     border-bottom: none;
-    color: rgba(204, 204, 204, 0.9);
+    color: var(--footer-color);
     margin-bottom: -3px;
     transform: none;
 }
@@ -872,7 +887,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: rgba(204, 204, 204, 0.9);
+    color: var(--footer-color);
     text-transform: uppercase;
     font-size: 10px;
 }
@@ -906,7 +921,7 @@ footer {
     width: 100%;
     margin: auto;
     text-align: center;
-    color: rgba(204, 204, 204, 0.719);
+    color: var(--footer-color);
     margin-top: -10px;
     font-weight: 400;
 }
@@ -1010,4 +1025,3 @@ footer {
         margin: 1rem;
     } */
 }
-
